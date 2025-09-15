@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+        <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
         <title>Rolling Ball</title>
     </head>
     <body>
@@ -10,7 +10,7 @@
      
             
 
-                                            <a-box position="-15 1.5 0" color="orange"
+                                            <a-box position="8 13 -10" color="black"
                     height="3" width="3" depth="1"
                     animation="
                     property: position;
@@ -19,7 +19,15 @@
                     loop: true;
                     dur: 2000;
                        dir: alternate;
-                    "></a-box>
+                    "
+                    
+                       animation__2="property: scale;
+                from: 1;
+                to: 0;
+                dur: 2000;
+                startEvents:click;
+               
+                "></a-box>
 
 
 
@@ -32,19 +40,27 @@
                     loop: true;
                     dur: 2000;
                        dir: alternate;
-                    "></a-box>
-            <a-sphere position="0 1 -5" radius="1" color="yellow"
+                    "   animation__2="property: scale;
+                from: 1;
+                to: 0;
+                dur: 2000;
+                startEvents:click;
+               
+                "></a-box>
+            <a-sphere position="0 1 -5" radius="1" src="https://codehs.com/uploads/22b8066c8c3ef2cb6f69e297e5273720"
 animation="property:position;from: 15 1 -100;  to: 15 1 100;
-        loop: true; dur: 1000;   dir: alternate;"></a-sphere>
+        loop: true; dur: 1000;   dir: alternate;"
+           animation="property: scale;
+                from: 1;
+                to: 0;
+                dur: 2000;
+                startEvents:click;
+               
+                "></a-sphere>
            
-            <a-circle src= "https://codehs.com/uploads/4bf4f5ffc0545adf76a36b344822aa24"
-                radius="2" position="0 2 -1"
-                animation="
-                    property: visible;
-                    from: true;
-                    to: false;
-                    startEvents:click;
-                    "></a-circle>
+            
+               
+                
                 
                         <a-camera>
                 <a-cursor></a-cursor>
@@ -70,6 +86,13 @@ animation="property:position;from: 15 1 -100;  to: 15 1 100;
                 loop: true;
                 dir: alternate;
                 easein:cubic;"
+                   animation__3="property: scale;
+                from: 1;
+                to: 0;
+                dur: 2000;
+                startEvents:click;
+               
+                "
                 ></a-box>
           <a-box position="0 1 -5" depth="2" height="4" width="0.5" color="tomato"
           animation="property: rotation;
@@ -87,7 +110,15 @@ animation="property:position;from: 15 1 -100;  to: 15 1 100;
                 dur: 3000;
                 loop: true;
                 dir: alternate;
-                easein:cubic;"></a-box>
+                easein:cubic;"
+                   animation__3="property: scale;
+                from: 1;
+                to: 0;
+                dur: 2000;
+                startEvents:click;
+               
+                "
+                ></a-box>
                
                 
                 
