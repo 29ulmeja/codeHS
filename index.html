@@ -3,8 +3,54 @@
     <head>
         <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
         <title>Rolling Ball</title>
+        <meta charset="utf-8">
+  <title>A-Frame with Countdown and Background Music</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+      body { margin: 0; overflow: hidden; }
+
+      #start-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 1em 2em;
+        font-size: 1.5em;
+        background: #222;
+        color: white;
+        border: none;
+        cursor: pointer;
+        z-index: 10;
+      }
+
+      #countdown {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 8em;
+        font-weight: bold;
+        color: white;
+        display: none;
+        z-index: 9;
+        text-shadow: 4px 4px 10px rgba(0,0,0,0.7);
+      }
+    </style>
     </head>
+    
+
+
     <body>
+         <!-- Audio element -->
+    <audio id="bg-music" loop>
+      <source src="INSERT SOURCE PATH" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- UI elements -->
+    <button id="start-button">Start Experience</button>
+    <div id="countdown">3</div>
+
         <a-scene>
  <a-sky color="red"></a-sky>
      
@@ -50,7 +96,7 @@
             <a-sphere position="0 1 -5" radius="1" src="https://codehs.com/uploads/22b8066c8c3ef2cb6f69e297e5273720"
 animation="property:position;from: 15 1 -100;  to: 15 1 100;
         loop: true; dur: 1000;   dir: alternate;"
-           animation__2="property: scale;
+           animation="property: scale;
                 from: 1;
                 to: 0;
                 dur: 2000;
